@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <input type="text" id="usuario" placeholder="Usuario" required>
+            <input type="password" id="contraseña" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <div id="error" style="color: red; display: none;">Usuario o contraseña incorrectos</div>
+    </div>
+
+    <div id="recetario-container" style="display: none;">
+        <h2>Recetario Interactivo</h2>
+        <button id="agregar-receta-btn">Agregar Receta</button>
+        <button id="lista-recetas-btn">Lista de Recetas</button>
+
+        <!-- Formulario de agregar receta -->
+        <div id="formulario-agregar-receta" style="display: none;">
+            <h3>Agregar Nueva Receta</h3>
+            <button id="atras-agregar-btn">Atrás</button>
+            <form id="form-receta">
+                <input type="text" id="nombre" placeholder="Nombre de la receta" required>
+                <textarea id="procedimiento" placeholder="Procedimiento" required></textarea>
+                <input type="number" id="porciones" value="2" min="2" required placeholder="Porciones">
+                <input type="file" id="imagen" accept="image/*" required>
+                <h4>Ingredientes (puede llenar hasta 10):</h4>
+                <div>
+                    <input type="text" id="ingrediente1" placeholder="Ingrediente 1" required>
+                    <input type="text" id="ingrediente2" placeholder="Ingrediente 2">
+                    <input type="text" id="ingrediente3" placeholder="Ingrediente 3">
+                    <input type="text" id="ingrediente4" placeholder="Ingrediente 4">
+                    <input type="text" id="ingrediente5" placeholder="Ingrediente 5">
+                    <input type="text" id="ingrediente6" placeholder="Ingrediente 6">
+                    <input type="text" id="ingrediente7" placeholder="Ingrediente 7">
+                    <input type="text" id="ingrediente8" placeholder="Ingrediente 8">
+                    <input type="text" id="ingrediente9" placeholder="Ingrediente 9">
+                    <input type="text" id="ingrediente10" placeholder="Ingrediente 10">
+                </div>
+                <button type="submit">Guardar Receta</button>
+            </form>
+        </div>
+
+        <!-- Lista de recetas -->
+        <div id="lista-recetas" style="display: none;">
+            <h2>Lista de recetas</h2>
+            <button id="atras-lista-btn">Atrás</button>
+            <div id="receta-lista"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
